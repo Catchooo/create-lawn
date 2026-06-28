@@ -1,6 +1,7 @@
 package com.mark.createlawn;
 
 import com.mark.createlawn.register.ModBlocks;
+import com.mark.createlawn.register.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -16,8 +17,12 @@ public class CreateLawn {
     public CreateLawn() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Реєструємо блоки через Registrate від Create
+        // Пов'язуємо реєстратор Create з Forge
         ModBlocks.REGISTRATE.registerEventListeners(modEventBus);
+        
+        // Ініціалізуємо наші блоки та предмети
+        ModBlocks.register();
+        ModItems.register();
 
         MinecraftForge.EVENT_BUS.register(this);
     }

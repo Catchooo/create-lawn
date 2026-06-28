@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="createlawn"
+version="1.0.0"
+displayName="Create: Lawn"
+authors="msbrbl"
+description='''
+Мод у стилі Create для розвивання різних видів газону в Minecraft!
+'''

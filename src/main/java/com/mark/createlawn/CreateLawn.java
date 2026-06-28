@@ -1,5 +1,6 @@
 package com.mark.createlawn;
 
+import com.mark.createlawn.register.ModBlocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -14,9 +15,10 @@ public class CreateLawn {
 
     public CreateLawn() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        
-        // Тут ми будемо реєструвати наші газони та шланги
-        
+
+        // Реєструємо блоки через Registrate від Create
+        ModBlocks.REGISTRATE.registerEventListeners(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
